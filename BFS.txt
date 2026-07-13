@@ -1,0 +1,25 @@
+from collections import deque
+
+graph = {
+    "Peshawar":["Islamabad","Mardan"],
+    "Islamabad":["Lahore","Rawalpindi"],
+    "Mardan":["Swabi"],
+    "Lahore":["Karachi"],
+    "Rawalpindi":[],
+    "Swabi":[],
+    "Karachi":[]
+}
+
+queue = deque(["Peshawar"])
+visited = []
+
+while queue:
+
+    city = queue.popleft()
+
+    if city not in visited:
+        visited.append(city)
+        queue.extend(graph[city])
+
+print("BFS Traversal")
+print(visited)

@@ -1,0 +1,21 @@
+graph = {
+    "CS":["AI","SE"],
+    "AI":["ML"],
+    "SE":["Cyber"],
+    "ML":[],
+    "Cyber":[]
+}
+
+stack = ["CS"]
+visited = []
+
+while stack:
+
+    department = stack.pop()
+
+    if department not in visited:
+        visited.append(department)
+        stack.extend(graph[department])
+
+print("DFS Traversal")
+print(visited)

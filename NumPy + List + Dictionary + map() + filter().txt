@@ -1,0 +1,40 @@
+import numpy as np
+
+# Employee salaries
+salaries = np.array([30000, 45000, 50000, 38000, 60000])
+
+print("Original Salaries:", salaries)
+
+# Bonus of 5000
+bonus_salary = salaries + 5000
+print("After Bonus:", bonus_salary)
+
+print("Highest Salary:", np.max(bonus_salary))
+print("Lowest Salary:", np.min(bonus_salary))
+print("Average Salary:", np.mean(bonus_salary))
+
+# Convert to list
+salary_list = bonus_salary.tolist()
+
+# Dictionary
+employees = {
+    "Ali": salary_list[0],
+    "Ahmed": salary_list[1],
+    "Sara": salary_list[2],
+    "Zain": salary_list[3],
+    "Ayesha": salary_list[4]
+}
+
+print("\nEmployee Salaries")
+for name, salary in employees.items():
+    print(name, ":", salary)
+
+# Increase salary by 10%
+updated = list(map(lambda x: x*1.10, salary_list))
+print("\n10% Increment")
+print(updated)
+
+# Salaries above 50000
+high_salary = list(filter(lambda x: x>50000, updated))
+print("\nAbove 50000")
+print(high_salary)

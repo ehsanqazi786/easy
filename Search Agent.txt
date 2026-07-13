@@ -1,0 +1,24 @@
+restaurants = {
+    "Home":["Pizza Hut","KFC"],
+    "Pizza Hut":["Dominos"],
+    "KFC":["Subway"],
+    "Dominos":[],
+    "Subway":[]
+}
+
+from collections import deque
+
+queue = deque(["Home"])
+
+visited=[]
+
+while queue:
+
+    place = queue.popleft()
+
+    if place not in visited:
+        visited.append(place)
+        queue.extend(restaurants[place])
+
+print("Delivery Route")
+print(visited)

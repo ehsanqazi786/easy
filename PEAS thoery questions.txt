@@ -1,0 +1,346 @@
+Question 1: Peshawar Chai Dhaba Intelligent Tea Making Agent
+Scenario:
+
+In Peshawar, a famous roadside chai dhaba wants to automate its tea-making process. The owner installs an AI-based tea-making assistant. The system observes customers arriving, checks their tea preferences, monitors milk and sugar levels, controls the cooking process, and prepares tea according to customer requirements.
+
+The AI assistant can decide:
+
+How much tea leaves to use
+Amount of milk and sugar
+Cooking duration
+Number of cups to prepare
+When to order more ingredients
+
+It uses cameras, temperature sensors, weight sensors, and customer feedback.
+
+Find PEAS:
+Agent:
+
+AI-based Tea Making Assistant
+
+Environment:
+Peshawar chai dhaba
+Customers
+Kitchen area
+Tea ingredients
+Weather conditions
+Available resources
+Performance Measure:
+Customer satisfaction
+Taste quality
+Fast service
+Minimum ingredient wastage
+Profitability
+Correct orders
+Actuators:
+Tea brewing machine
+Milk dispenser
+Sugar dispenser
+Heating control
+Cup serving mechanism
+Ordering system
+Sensors:
+Camera to detect customers
+Temperature sensors
+Weight sensors for ingredients
+Customer feedback system
+Inventory sensors
+Question 2: Autonomous Ambulance Agent
+Scenario:
+
+A smart ambulance is designed to transport emergency patients without a human driver. It receives emergency calls, selects the fastest route, avoids traffic, monitors patient condition, and communicates with hospitals.
+
+The ambulance uses GPS, cameras, medical sensors, traffic information, and patient monitoring devices.
+
+Identify PEAS.
+
+Agent:
+
+Autonomous Ambulance Driving System
+
+Environment:
+Roads
+Traffic
+Weather
+Pedestrians
+Other vehicles
+Patients
+Hospitals
+Performance Measure:
+Reaching hospital quickly
+Patient safety
+Avoiding accidents
+Following traffic laws
+Maintaining patient health
+Actuators:
+Steering control
+Brake system
+Accelerator
+Emergency lights
+Communication system
+Route selection
+Sensors:
+GPS
+Cameras
+Radar sensors
+Medical monitoring sensors
+Traffic data sensors
+Question 3: AI-Based Restaurant Chef Agent
+Scenario:
+
+A restaurant introduces an AI chef that prepares traditional Pakistani food. The system receives customer orders, checks available ingredients, decides recipes, controls cooking temperature, and prepares dishes.
+
+It learns from customer reviews to improve food quality.
+
+Find PEAS.
+
+Agent:
+
+AI Chef System
+
+Environment:
+Restaurant kitchen
+Customers
+Food ingredients
+Cooking equipment
+Orders
+Performance Measure:
+Food quality
+Customer satisfaction
+Cooking speed
+Low food waste
+Correct order preparation
+Actuators:
+Robotic arms
+Cooking equipment
+Ingredient dispensers
+Serving system
+Sensors:
+Cameras
+Temperature sensors
+Ingredient quantity sensors
+Customer feedback
+Question 4: Smart Traffic Management System in Lahore
+Scenario:
+
+The government installs an AI traffic control system in Lahore. The system observes traffic flow, detects accidents, changes traffic signals, gives route recommendations, and reduces congestion.
+
+Agent:
+
+AI Traffic Management System
+
+Environment:
+Roads
+Vehicles
+Pedestrians
+Weather
+Traffic conditions
+Performance Measure:
+Reduced traffic jams
+Reduced waiting time
+Accident prevention
+Smooth traffic flow
+Actuators:
+Traffic lights
+Digital signs
+Emergency alerts
+Route recommendations
+Sensors:
+CCTV cameras
+Vehicle counters
+GPS data
+Weather sensors
+Question 5: AI Farming Agent for Pakistani Farmers
+Scenario:
+
+A farmer uses an AI system to manage crops. The system monitors soil, weather, plant health, and automatically controls irrigation and fertilizer usage.
+
+Agent:
+
+Smart Agriculture AI System
+
+Environment:
+Farm land
+Crops
+Weather
+Soil
+Water resources
+Performance Measure:
+Maximum crop production
+Minimum water usage
+Healthy plants
+Reduced cost
+Actuators:
+Water irrigation system
+Fertilizer dispenser
+Pest control system
+Sensors:
+Soil moisture sensors
+Weather sensors
+Cameras
+Drone images
+Question 6: AI Online Teacher Agent
+Scenario:
+
+An AI teacher provides online education to students. It analyzes student performance, creates quizzes, explains concepts, detects weaknesses, and changes teaching style according to student needs.
+
+Agent:
+
+AI Teaching Assistant
+
+Environment:
+Online classroom
+Students
+Learning material
+Exams
+Internet environment
+Performance Measure:
+Student improvement
+High exam scores
+Engagement
+Correct explanations
+Actuators:
+Display lessons
+Generate quizzes
+Provide feedback
+Recommend exercises
+Sensors:
+Student answers
+Webcam (optional)
+Learning history
+Quiz results
+Question 7: AI Security Guard Agent
+Scenario:
+
+A shopping mall uses an AI security guard system. It monitors cameras, detects suspicious activities, identifies unauthorized access, and alerts human guards.
+
+Agent:
+
+AI Security Monitoring System
+
+Environment:
+Shopping mall
+Visitors
+Employees
+Security areas
+Performance Measure:
+Crime prevention
+Accurate detection
+Fast response
+Minimum false alarms
+Actuators:
+Alarm system
+Door locking system
+Notification system
+Security communication
+Sensors:
+CCTV cameras
+Face recognition system
+Motion sensors
+Access cards
+Question 8: AI Doctor Diagnosis Agent (Difficult)
+Scenario:
+
+A hospital uses an AI medical assistant. Patients enter symptoms, medical history, lab reports, and scans. The AI analyzes data, suggests possible diseases, recommends treatments, and assists doctors.
+
+Agent:
+
+AI Medical Diagnosis System
+
+Environment:
+Hospital
+Patients
+Doctors
+Medical database
+Laboratory systems
+Performance Measure:
+Diagnosis accuracy
+Patient safety
+Fast diagnosis
+Correct recommendations
+Actuators:
+Diagnosis reports
+Treatment suggestions
+Emergency alerts
+Appointment recommendations
+Sensors:
+Patient symptoms
+Medical records
+X-rays
+Blood test results
+Question 9: AI-Based Airport Security Agent (Very Exam Style)
+Scenario:
+
+An international airport installs an AI security system. It scans passengers, checks luggage, detects dangerous objects, monitors crowd movement, and alerts security officers.
+
+Find PEAS.
+
+Agent:
+
+AI Airport Security System
+
+Environment:
+Airport terminal
+Passengers
+Luggage
+Security staff
+Aircraft area
+Performance Measure:
+Security accuracy
+Fast passenger processing
+Detection of threats
+Minimum false alarms
+Actuators:
+Alarm activation
+Security notifications
+Gate control
+Camera tracking
+Sensors:
+X-ray scanners
+Cameras
+Identity scanners
+Motion sensors
+Question 10: AI Delivery Robot Agent (Amazon Style)
+Scenario:
+
+A delivery robot delivers packages inside a university campus. It receives delivery requests, finds routes, avoids obstacles, and delivers packages to students.
+
+Agent:
+
+Autonomous Delivery Robot
+
+Environment:
+University campus
+Roads
+Students
+Buildings
+Weather
+Performance Measure:
+Successful delivery
+Minimum delivery time
+Avoiding collisions
+Battery efficiency
+Actuators:
+Wheels
+Robotic arm
+Speaker
+Navigation system
+Sensors:
+GPS
+Camera
+Ultrasonic sensors
+Battery sensors
+Exam Trick to Remember:
+
+Whenever you see:
+
+"AI system observes, decides, and acts"
+
+Write:
+
+PEAS Part	Ask Yourself
+Agent	Who is making decisions?
+Environment	Where does it work?
+Sensors	What does it observe?
+Actuators	What actions can it perform?
+Performance	How do we know it is good?

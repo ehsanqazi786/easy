@@ -1,0 +1,22 @@
+import numpy as np
+
+semester1 = np.array([[70,80],
+                      [90,75]])
+
+semester2 = np.array([[80,85],
+                      [70,95]])
+
+print("Semester 1")
+print(semester1)
+
+print("\nSemester 2")
+print(semester2)
+
+print("\nCombined Marks")
+print(semester1+semester2)
+
+print("\nAverage")
+print((semester1+semester2)/2)
+
+print("\nMatrix Multiplication")
+print(np.dot(semester1,semester2))
