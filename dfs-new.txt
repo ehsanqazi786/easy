@@ -1,0 +1,73 @@
+
+def dfs(graph, start, goal):
+   
+    stack = []
+    stack.append( (start, [start]) )  # (node, path_to_node)
+    
+    # Keep track of visited nodes
+    visited = set()
+    
+   
+    while len(stack) > 0:
+        
+        
+        current_node, path = stack.pop()  
+        
+       
+        if current_node in visited:
+            continue
+        visited.add(current_node)
+        
+        
+        if current_node == goal:
+            return path
+        
+        neighbors = graph.get(current_node, [])
+        
+        for neighbor in neighbors:
+            if neighbor not in visited:
+                new_path = path + [neighbor]
+                stack.append( (neighbor, new_path) )
+    
+   
+    return None
+
+def dfs_recursive(graph, current, goal, visited=None, path=None):
+    """
+    DFS using recursion - more elegant but uses more memory.
+    """
+    if visited is None:
+        visited = set()
+    if path is None:
+        path = []
+    
+    visited.add(current)
+    path = path + [current]
+    
+    if current == goal:
+        return path
+    
+    for neighbor in graph.get(current, []):
+        if neighbor not in visited:
+            result = dfs_recursive(graph, neighbor, goal, visited, path)
+            if result:
+                return result
+    
+    return None
+
+
+
+if __name__ == "__main__":
+    
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['A', 'D', 'E'],
+        'C': ['A', 'F'],
+        'D': ['B'],
+        'E': ['B', 'F'],
+        'F': ['C', 'E']
+    }
+    
+    print("DFS (Iterative):", dfs(graph, 'A', 'F'))
+    print("DFS (Recursive):", dfs_recursive(graph, 'A', 'F'))
+    
