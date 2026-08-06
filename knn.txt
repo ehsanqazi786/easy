@@ -1,0 +1,57 @@
+import math
+
+def euclidean_distance(p1, p2):
+    d = 0
+    for i in range(len(p1)):
+        d = d + (p1[i] - p2[i]) ** 2
+    return math.sqrt(d)
+
+def knn_predict(data, query, k):
+    distances = []
+
+    # Calculate distances
+    for item in data:
+        features = item[0]
+        label = item[1]
+
+        d = euclidean_distance(features, query)
+        distances.append([d, label])
+
+    # Sort by distance
+    distances.sort()
+
+    pass_count = 0
+    fail_count = 0
+
+    # Count votes
+    for i in range(k):
+        if distances[i][1] == "Pass":
+            pass_count = pass_count + 1
+        else:
+            fail_count = fail_count + 1
+
+    # Return prediction
+    if pass_count > fail_count:
+        return "Pass"
+    elif fail_count > pass_count:
+        return "Fail"
+    else:
+        # Tie: return nearest neighbour's label
+        return distances[0][1]
+
+
+data = [
+    ([7,1,90], "Pass"),
+    ([3,4,60], "Fail"),
+    ([6,2,85], "Pass"),
+    ([2,5,55], "Fail"),
+    ([8,0,95], "Pass"),
+    ([4,3,65], "Fail"),
+    ([7,2,88], "Pass"),
+    ([3,4,58], "Fail")
+]
+
+query = [5,3,70]
+
+print(knn_predict(data, query, 3))
+print(knn_predict(data, query, 5))

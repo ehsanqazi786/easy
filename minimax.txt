@@ -1,0 +1,24 @@
+def minimax(depth, node, maximizing, values):
+
+    if depth == 3:
+        return values[node]
+
+    if maximizing:
+
+        left = minimax(depth+1, node*2, False, values)
+        right = minimax(depth+1, node*2+1, False, values)
+
+        return max(left, right)
+
+    else:
+
+        left = minimax(depth+1, node*2, True, values)
+        right = minimax(depth+1, node*2+1, True, values)
+
+        return min(left, right)
+
+
+values = [3,5,6,9,1,2,0,-1]
+
+print(minimax(0,0,True,values))
+

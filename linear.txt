@@ -1,0 +1,48 @@
+import numpy as np
+
+x = np.array([1,2,3,4,5])
+y = np.array([2,4,5,4,5])
+
+m = ((x-x.mean())*(y-y.mean())).sum() / ((x-x.mean())**2).sum()
+
+b = y.mean() - m*x.mean()
+
+print("Slope =",m)
+print("Intercept =",b)
+
+prediction = m*6+b
+
+print("Prediction for x=6:",prediction)
+
+
+
+
+
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+data = {
+    "Experience":[1,2,3,4,5],
+    "Hours":[2,3,5,6,8],
+    "Salary":[30,40,50,65,80]
+}
+
+df = pd.DataFrame(data)
+
+X = df[["Experience","Hours"]]
+y = df["Salary"]
+
+X_train,X_test,y_train,y_test = train_test_split(
+    X,y,test_size=0.2,random_state=42
+)
+
+model = LinearRegression()
+
+model.fit(X_train,y_train)
+
+prediction = model.predict(X_test)
+
+print(prediction)

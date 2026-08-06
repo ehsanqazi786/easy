@@ -1,0 +1,71 @@
+import numpy as np
+
+data = np.array([
+    [1,2],
+    [2,1],
+    [3,3],
+    [8,8],
+    [9,9],
+    [10,8]
+])
+
+k = 2
+
+# Take first k points as centroids
+centroids = data[:k]
+
+for i in range(5):      # 5 iterations
+
+    cluster1 = []
+    cluster2 = []
+
+    # Assign points
+    for point in data:
+
+        d1 = np.sqrt((point[0]-centroids[0][0])**2 + (point[1]-centroids[0][1])**2)
+        d2 = np.sqrt((point[0]-centroids[1][0])**2 + (point[1]-centroids[1][1])**2)
+
+        if d1 < d2:
+            cluster1.append(point)
+        else:
+            cluster2.append(point)
+
+    # Update centroids
+    centroids[0] = np.mean(cluster1, axis=0)
+    centroids[1] = np.mean(cluster2, axis=0)
+
+print("Centroids:")
+print(centroids)
+
+print("Cluster 1:")
+print(cluster1)
+
+print("Cluster 2:")
+print(cluster2)
+
+
+
+
+
+
+
+from sklearn.cluster import KMeans
+import numpy as np
+
+data = np.array([
+    [1,2],
+    [2,1],
+    [3,3],
+    [8,8],
+    [9,9],
+    [10,8]
+])
+
+model = KMeans(n_clusters=2, random_state=42)
+model.fit(data)
+
+print("Centroids:")
+print(model.cluster_centers_)
+
+print("Labels:")
+print(model.labels_)
